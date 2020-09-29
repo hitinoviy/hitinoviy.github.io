@@ -1,2 +1,0 @@
-# hitinoviy.github.io
-site
