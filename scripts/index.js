@@ -1,16 +1,17 @@
 let nav = document.querySelector('.menu');
 let navLinks = nav.querySelectorAll('.menu__link');
 
-window.addEventListener('hashchange', (e)=>{
-  toggleMenuActiveClass(e.newURL)
-})
+window.addEventListener('hashchange', (e) => {
+  toggleMenuActiveClass(e.newURL);
+});
 
 const toggleMenuActiveClass = (url) => {
   navLinks.forEach((item) => {
     item.classList.remove('active');
-    if(item.href === url){
+    if (item.href === url) {
       item.classList.add('active');
     }
   });
 };
-hitinoviy.github.io
+
+document.querySelector('.box').style.background = 'red';

@@ -1,50 +1,182 @@
 @import url("https://fonts.googleapis.com/css2?family=Jura:wght@300..700&display=swap");
 * {
-  font-family: "Jura", sans-serif; }
+  font-family: "Jura", sans-serif;
+}
 
 html {
-  scroll-behavior: smooth; }
+  scroll-behavior: smooth;
+}
 
 body {
-  background: #1e1e1e; }
+  background: rgb(30, 30, 30);
+}
 
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  width: 100%; }
+  width: 100%;
+}
 
 .menu {
+  background: #121112;
+  height: 4vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+.menu__container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: fixed;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
   width: 100%;
-  max-width: 1200px; }
-  .menu__logo {
-    background: linear-gradient(136.53deg, white 0%, #009ca2 90%, #009ca2 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    text-fill-color: transparent;
-    font-size: 35px;
-    font-weight: 300; }
-  .menu__link {
-    color: white;
-    font-size: 35px;
-    font-weight: 300;
-    line-height: 41px;
-    margin-left: 20px;
-    transition: .5s color; }
-    .menu__link:first-child {
-      margin-left: 0; }
-  .menu .active {
-    color: #009CA2; }
+  max-width: 1200px;
+}
+.menu__logo {
+  background: linear-gradient(136.53deg, rgb(255, 255, 255) 0%, rgb(0, 156, 162) 90%, rgb(0, 156, 162) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  font-size: 35px;
+  font-weight: 300;
+}
+.menu__link {
+  color: rgb(255, 255, 255);
+  font-size: 35px;
+  font-weight: 300;
+  line-height: 41px;
+  margin-left: 20px;
+  transition: 0.5s color;
+}
+.menu__link:first-child {
+  margin-left: 0;
+}
+.menu .active {
+  color: #009ca2;
+}
 
 .header {
   min-height: 100vh;
-  background: #121112; }
+  background: #121112;
+}
+.header__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 90vh;
+}
+.header__title {
+  color: rgb(0, 156, 162);
+  font-size: 35px;
+  font-weight: 300;
+  margin: 0;
+}
+.header__text {
+  margin: 0;
+  color: rgb(255, 255, 255);
+  font-family: Jura;
+  font-size: 35px;
+  font-weight: 300;
+}
+.header__btn {
+  color: rgb(0, 156, 162);
+  font-family: Jura;
+  font-size: 35px;
+  font-weight: 300;
+  border: 1px solid rgb(0, 156, 162);
+  padding: 9px 47px;
+  transition: 0.5s background, 0.5s color;
+}
+.header__btn:hover {
+  background: rgba(0, 156, 162, 0.5);
+  color: black;
+}
+.header__scroll {
+  width: 48px;
+  height: 86px;
+  border: 2px solid rgb(0, 156, 162);
+  border-radius: 100px;
+  position: relative;
+  margin: 18px auto;
+}
+.header__scroll::before {
+  content: "";
+  width: 12px;
+  height: 12px;
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgb(0, 156, 162);
+  border-radius: 50%;
+  opacity: 1;
+  animation: wheel 2s infinite;
+}
 
-/*# sourceMappingURL=style.css.map */
+.about__title {
+  text-align: center;
+  color: rgb(255, 255, 255);
+  font-size: 45px;
+  font-weight: 300;
+}
+.about__content {
+  display: flex;
+  align-items: center;
+}
+.about__left {
+  width: 50%;
+}
+.about__left img {
+  width: 100%;
+  filter: grayscale(0.5);
+}
+.about__right {
+  width: 50%;
+  padding-left: 50px;
+}
+.about__subtitle {
+  font-size: 30px;
+  color: #009ca2;
+}
+.about__text {
+  font-size: 30px;
+  color: #ffffff;
+}
+
+.skills__title {
+  text-align: center;
+  color: rgb(255, 255, 255);
+  font-size: 45px;
+  font-weight: 300;
+}
+.skills__container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.skills__item {
+  background: rgba(113, 112, 113, 0.5);
+  margin: 25px;
+  padding: 24px 0;
+  max-width: 350px;
+  width: 100%;
+  text-align: center;
+  font-size: 30px;
+  color: #ffffff;
+}
+
+.works__title {
+  text-align: center;
+  color: rgb(255, 255, 255);
+  font-size: 45px;
+  font-weight: 300;
+}
+
+@keyframes wheel {
+  to {
+    opacity: 0;
+    top: 60px;
+  }
+}/*# sourceMappingURL=style.css.map */
