@@ -1,0 +1,339 @@
+@import url("https://fonts.googleapis.com/css2?family=Jura:wght@300..700&display=swap");
+* {
+  font-family: "Jura", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: rgb(10, 10, 10);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.menu {
+  background: #121112;
+  height: 4vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+.menu__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+}
+.menu__logo {
+  background: linear-gradient(136.53deg, rgb(255, 255, 255) 0%, rgb(0, 156, 162) 90%, rgb(0, 156, 162) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  font-size: 35px;
+  font-weight: 300;
+}
+.menu__link {
+  color: rgb(255, 255, 255);
+  font-size: 35px;
+  font-weight: 300;
+  line-height: 41px;
+  margin-left: 20px;
+  transition: 0.5s color;
+}
+.menu__link:first-child {
+  margin-left: 0;
+}
+.menu .active {
+  color: #009ca2;
+}
+
+.header {
+  min-height: 100vh;
+  background: #121112;
+}
+.header__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 90vh;
+}
+.header__title {
+  color: rgb(0, 156, 162);
+  font-size: 35px;
+  font-weight: 300;
+  margin: 0;
+}
+.header__text {
+  margin: 0;
+  color: rgb(255, 255, 255);
+  font-family: Jura;
+  font-size: 35px;
+  font-weight: 300;
+}
+.header__btn {
+  color: rgb(0, 156, 162);
+  font-family: Jura;
+  font-size: 35px;
+  font-weight: 300;
+  border: 1px solid rgb(0, 156, 162);
+  padding: 9px 47px;
+  transition: 0.5s background, 0.5s color;
+}
+.header__btn:hover {
+  background: rgba(0, 156, 162, 0.5);
+  color: black;
+}
+.header__scroll {
+  width: 48px;
+  height: 86px;
+  border: 2px solid rgb(0, 156, 162);
+  border-radius: 100px;
+  position: relative;
+  margin: 18px auto;
+}
+.header__scroll::before {
+  content: "";
+  width: 12px;
+  height: 12px;
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgb(0, 156, 162);
+  border-radius: 50%;
+  opacity: 1;
+  animation: wheel 2s infinite;
+}
+
+.about__title {
+  text-align: center;
+  color: rgb(255, 255, 255);
+  font-size: 45px;
+  font-weight: 300;
+}
+.about__content {
+  display: flex;
+  align-items: center;
+}
+.about__left {
+  width: 50%;
+}
+.about__left img {
+  width: 100%;
+  filter: grayscale(0.5);
+}
+.about__right {
+  width: 50%;
+  padding-left: 50px;
+}
+.about__subtitle {
+  font-size: 30px;
+  color: #009ca2;
+}
+.about__text {
+  font-size: 30px;
+  color: #ffffff;
+}
+
+.skills__title {
+  text-align: center;
+  color: rgb(255, 255, 255);
+  font-size: 45px;
+  font-weight: 300;
+}
+.skills__container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.skills__item {
+  background: rgba(113, 112, 113, 0.5);
+  margin: 25px;
+  padding: 24px 0;
+  max-width: 350px;
+  width: 100%;
+  text-align: center;
+  font-size: 30px;
+  color: #ffffff;
+}
+
+.works__title {
+  text-align: center;
+  color: rgb(255, 255, 255);
+  font-size: 45px;
+  font-weight: 300;
+}
+.works__item {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  border-top: 5px solid rgb(196, 196, 196);
+  margin-bottom: 50px;
+}
+.works__item_content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.works__item_title {
+  color: rgb(255, 255, 255);
+  font-family: Jura;
+  font-size: 30px;
+  font-weight: 300;
+  margin-bottom: 0;
+}
+.works__item_branches {
+  display: flex;
+  color: #ffffff;
+}
+.works__item_branch {
+  border-radius: 15px;
+  background: rgba(113, 112, 113, 0.5);
+  padding: 7px 50px;
+  margin-right: 13px;
+}
+.works__item_branch:last-child {
+  margin-right: 0;
+}
+.works__item_num {
+  font-size: 100px;
+  color: #ffffff;
+  font-weight: 300;
+}
+.works__item_buttons {
+  display: flex;
+}
+.works__item_button {
+  color: rgb(255, 255, 255);
+  display: block;
+  font-family: Jura;
+  font-size: 16px;
+  font-weight: 400;
+  box-sizing: border-box;
+  background: #1e1e1e;
+  padding: 5px 28px;
+  border-radius: 5px;
+}
+.works__item_button-border {
+  margin: 10px;
+  padding: 2px;
+  border-radius: 5px;
+  background: #1e1e1e;
+  position: relative;
+  z-index: 5;
+}
+.works__item_button-border::after {
+  content: "";
+  background: linear-gradient(149.92deg, rgb(0, 156, 162) -1.957%, rgb(15, 65, 67) 93.104%);
+  opacity: 0;
+  transition: opacity 0.5s;
+  border-radius: 5px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+.works__item_button-border:first-child {
+  margin-left: 0;
+}
+.works__item_button-border:hover::after {
+  opacity: 1;
+}
+.works__item_slider img {
+  width: 100%;
+  max-width: 424px;
+}
+
+.contact {
+  margin-bottom: 40px;
+}
+.contact__title {
+  text-align: center;
+  color: rgb(255, 255, 255);
+  font-size: 45px;
+  font-weight: 300;
+}
+.contact__form {
+  display: flex;
+  color: rgb(255, 255, 255);
+  flex-wrap: wrap;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+.contact__form label {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  font-size: 25px;
+}
+.contact__form input {
+  border: 1px solid rgb(0, 156, 162);
+  background: none;
+  outline: none;
+  color: rgb(0, 156, 162);
+  padding: 10px;
+}
+.contact__name {
+  width: 30%;
+}
+.contact__email {
+  width: 30%;
+}
+.contact__message {
+  width: calc(60% + 20px);
+}
+.contact__message textarea {
+  resize: vertical;
+  border: 1px solid rgb(0, 156, 162);
+  background: none;
+  outline: none;
+  color: rgb(0, 156, 162);
+  min-height: 150px;
+  padding: 10px;
+}
+.contact__btn {
+  width: calc(60% + 20px);
+  font-size: 25px;
+  cursor: pointer;
+  transition: 0.5s background, 0.5s color;
+}
+.contact__btn:hover {
+  background: rgba(0, 156, 162, 0.5);
+  color: black;
+}
+.contact__success {
+  text-align: center;
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+}
+
+.footer {
+  background: rgb(18, 17, 18);
+  padding: 30px;
+}
+.footer__text {
+  color: rgb(255, 255, 255);
+  text-align: center;
+  font-size: 15px;
+}
+
+@keyframes wheel {
+  to {
+    opacity: 0;
+    top: 60px;
+  }
+}/*# sourceMappingURL=style.css.map */
